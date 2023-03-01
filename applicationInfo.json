@@ -1,9 +1,9 @@
 [
    {
-      "NetVersion": "2.0",
+      "NetVersion": "4.0",
       "IISitePool": {
          "name": "DemoPool",
-         "managedRuntimeVersion": "v2.0",
+         "managedRuntimeVersion": "v4.0",
          "managedPipelineMode": "Classic",
          "features": [
             {
@@ -26,10 +26,6 @@
             }
          ]
       },
-      "Tasks": [
-            "Create-Logs-Folder",
-            "Install-Certificates",
-            "Install-Oracle-Client"
-      ]
+      "Tasks": []
    }
 ]
