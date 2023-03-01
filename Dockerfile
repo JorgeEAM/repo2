@@ -3,14 +3,9 @@
 FROM mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019
 #FROM mcr.microsoft.com/dotnet/framework/aspnet:3.5
 
-WORKDIR /certs
-COPY /certs .
-
 WORKDIR /source
-RUN curl -k https://nexusmaster.alm.europe.cloudcenter.corp/repository/scq-iac-snapshots/SCF/ficres/DRWAPL_FICRES.zip -o DRWAPL_FICRES.zip
 COPY applicationInfo.json .
-COPY pwsCore.zip .
-COPY tnsnames.ora .
+COPY DRWAPL_FICRES.zip .
 
 WORKDIR /scripts
 COPY /scripts .
