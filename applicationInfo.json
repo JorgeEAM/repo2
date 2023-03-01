@@ -1,0 +1,35 @@
+[
+   {
+      "NetVersion": "2.0",
+      "IISitePool": {
+         "name": "DemoPool",
+         "managedRuntimeVersion": "v2.0",
+         "managedPipelineMode": "Classic",
+         "features": [
+            {
+               "enable32bitapponwin64": true
+            }
+         ]
+      },
+      "IISiteServer": {
+         "name": "Default Web Site",
+         "physicalpath": "C:\\inetpub\\wwwroot",
+         "bindings": "http/*:80:",
+         "features": []
+      },
+      "IISiteApp": {
+         "name": "ficresnetv4",
+         "physicalpath": "C:\\inetpub\\wwwroot\\ficresnetv4\\",
+         "features": [
+            {
+               "preloadEnabled": true
+            }
+         ]
+      },
+      "Tasks": [
+            "Create-Logs-Folder",
+            "Install-Certificates",
+            "Install-Oracle-Client"
+      ]
+   }
+]
